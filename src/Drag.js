@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import DndContext from "./common";
+import { DndContext } from "./common";
 import Column from "./Column";
 
 const Container = ({ children }) => (
@@ -23,7 +23,7 @@ const getItems = (dragGroup, columnId) => {
   );
 };
 
-export default class App extends Component {
+export default class Drag extends Component {
   render() {
     return (
       <DndContext>
@@ -78,36 +78,6 @@ export default class App extends Component {
               toggleSelectionInGroup={toggleSelectionInGroup}
               multiSelectTo={multiSelectTo}
             />
-            {/* <Column
-              type="dragGroupBreakdowns"
-              columnId="ba"
-              items={getItems(dragGroupBreakdowns, "ba")}
-              selectedIds={selectedBreakdownIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            />
-             <Column
-              type="dragGroupBreakdowns"
-              columnId="pm"
-              items={getItems(dragGroupBreakdowns, "pm")}
-              selectedIds={selectedBreakdownIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            /> */}
-            {/* <Column
-              type='dragGroupManagerList'
-              columnId='managerList'
-              items={getItems(dragGroupManagerList, 'managerList')}
-              selectedIds={selectedManagerListIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            /> */}
           </Container>
         )}
       </DndContext>
