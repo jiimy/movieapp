@@ -1,6 +1,6 @@
 export { DndContext } from "./DndContext";
 export { DndDraggable } from "./DndDraggable";
-export { DndDroppable } from "./DndDroppable";
+export { default as DndDroppable } from "./DndDroppable";
 export { SelectionCount } from "./SelectionCount";
 export { getDragGroupByColumn } from "./getDragGroupByColumn";
 export { getSelectedMap } from "./getSelectedMap";

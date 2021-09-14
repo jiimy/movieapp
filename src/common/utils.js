@@ -1,12 +1,12 @@
 // import { invariant } from 'react-beautiful-dnd';
 import reorder from "./reorder";
 
-const withNewItemIds = (column, itemIds) => ({
+export const withNewItemIds = (column, itemIds) => ({
   id: column.id,
   itemIds
 });
 
-const reorderSingleDrag = ({
+export const reorderSingleDrag = ({
   dragGroup,
   selectedItemIds,
   source,
@@ -62,7 +62,7 @@ export const getHomeColumn = (dragGroup, itemId) => {
   }
 };
 
-const reorderMultiDrag = ({
+export const reorderMultiDrag = ({
   dragGroup,
   selectedItemIds,
   source,

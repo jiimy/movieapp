@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import DndContext from "./common";
+import {DndContext} from "./common";
 import Column from "./Column";
 
 const Container = ({ children }) => (
@@ -78,39 +78,23 @@ export default class App extends Component {
               toggleSelectionInGroup={toggleSelectionInGroup}
               multiSelectTo={multiSelectTo}
             />
-            {/* <Column
-              type="dragGroupBreakdowns"
-              columnId="ba"
-              items={getItems(dragGroupBreakdowns, "ba")}
-              selectedIds={selectedBreakdownIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            />
-             <Column
-              type="dragGroupBreakdowns"
-              columnId="pm"
-              items={getItems(dragGroupBreakdowns, "pm")}
-              selectedIds={selectedBreakdownIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            /> */}
-            {/* <Column
-              type='dragGroupManagerList'
-              columnId='managerList'
-              items={getItems(dragGroupManagerList, 'managerList')}
-              selectedIds={selectedManagerListIds}
-              draggingItemId={draggingItemId}
-              toggleSelection={toggleSelection}
-              toggleSelectionInGroup={toggleSelectionInGroup}
-              multiSelectTo={multiSelectTo}
-            /> */}
           </Container>
         )}
       </DndContext>
     );
   }
 }
+
+// import React from 'react';
+// import { Tester }  from './income';
+
+// const App = () => {
+//   return (
+//     <div>
+//       테스터 불러오기
+//       <Tester/>
+//     </div>
+//   );
+// };
+
+// export default App;
