@@ -18,9 +18,19 @@ const Container = ({ children }) => (
 const getItems = (dragGroup, columnId) => {
   console.log({ dragGroup });
   console.log({ columnId });
-  return dragGroup?.columns[columnId].itemIds?.map(
-    (id) => dragGroup.itemsObject[id]
-  );
+  // return dragGroup?.columns[columnId].itemIds?.map(
+  //   (id) => dragGroup.itemsObject[id]
+  // );
+
+  if (dragGroup && 
+    dragGroup.columns[columnId] && 
+    dragGroup.columns[columnId]['itemIds']) {
+      return dragGroup.columns[columnId]['itemIds'].map(id => {
+       return dragGroup.itemsObject[id]
+    })
+  }
+
+  return;
 };
 
 export default class Drag extends Component {

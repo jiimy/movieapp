@@ -9,8 +9,13 @@ import {
 } from "./index";
 
 export class DndContext extends Component {
+  
   dragGroupState = {};
-  foo = dragGroups?.forEach((group) => {
+  // foo = dragGroups?.forEach((group) => {
+  //   this.dragGroupState[group.name] = group;
+  //   this.dragGroupState[group.selectedList] = [];
+  // });
+  foo = dragGroups && dragGroups.forEach((group) => {
     this.dragGroupState[group.name] = group;
     this.dragGroupState[group.selectedList] = [];
   });

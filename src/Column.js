@@ -1,6 +1,6 @@
 import React from "react";
 
-import  DndDroppable from "./common/DndDroppable";
+import DndDroppable from "./common/DndDroppable";
 import { Item } from "./Item";
 import { getDragGroupByColumn, getSelectedMap } from "./common";
 
@@ -26,7 +26,7 @@ export default function Column({
             isSelected &&
             Boolean(draggingItemId) &&
             draggingItemId !== item.id &&
-            dragGroup?.name === type;
+            dragGroup.name === type;
           return (
             <Item
               item={item}
